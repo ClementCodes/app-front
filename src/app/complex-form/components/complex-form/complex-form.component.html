@@ -1,0 +1,52 @@
+<mat-card [formGroup]="mainForm" class="main-form">
+  <mat-card-title>Inscription</mat-card-title>
+  <mat-card class="form-card">
+    <mat-card-subtitle>Informationss personnelles</mat-card-subtitle>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Nom de connection </mat-label>
+        <input type="text" matInput formControlName="userName" />
+        <mat-error>Ce champs est requis</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Téléphone</mat-label>
+        <input type="number" matInput formControlName="mobileNo" />
+        <mat-error>Ce champs est requis</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <mat-card class="form-card">
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput formControlName="emailId" />
+        <mat-error>Ce champs est requis</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Ville</mat-label>
+        <input type="text" matInput formControlName="city" />
+        <mat-error>Ce champs est requis</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card>
+
+  <mat-card class="form-card">
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input type="password" matInput formControlName="password" />
+        <mat-error>Ce champs est requis</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <button
+    mat-flat-button
+    color="primary"
+    (click)="onSubmitForm()"
+    [routerLink]="['/profil']"
+  >
+    ENREGISTRER
+  </button>
+</mat-card>

@@ -1,0 +1,7 @@
+<p>pages-componoent works!</p>
+<h1>hello</h1>
+<h2>helllooo</h2>
+<app-user-connection
+  *ngFor="let userColetet of userConnection$ | async"
+  [userColet]="userColetet"
+></app-user-connection>
